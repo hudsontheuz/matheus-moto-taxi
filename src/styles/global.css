@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --brand-red: #dc2626;
@@ -23,7 +25,8 @@ body {
   box-sizing: border-box;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
 }
 
@@ -32,7 +35,9 @@ img, svg {
     scroll-behavior: auto;
   }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
