@@ -1,0 +1,16 @@
+---
+type Props = {
+  label?: string;
+  class?: string;
+};
+
+const { label = "Ligar agora", class: className = "" } = Astro.props;
+---
+
+<a
+  href="tel:991073234"
+  aria-label="Ligar agora para Matheus Moto Táxi"
+  class={`inline-flex min-h-12 items-center justify-center rounded-full bg-red-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-red-600/25 transition hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-200 ${className}`}
+>
+  <span aria-hidden="true" class="mr-2">📞</span>{label}
+</a>

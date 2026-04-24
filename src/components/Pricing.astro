@@ -1,0 +1,21 @@
+---
+import CallButton from './CallButton.astro';
+---
+<section id="valores" class="bg-red-50 px-4 py-16 lg:px-6">
+  <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[.9fr_1fr] lg:items-center">
+    <div class="rounded-[2rem] bg-white p-6 shadow-xl ring-1 ring-red-100">
+      <p class="text-sm font-black uppercase tracking-wide text-red-700">Valores</p>
+      <h2 class="mt-2 text-3xl font-black text-gray-950 sm:text-4xl">Valores combinados antes do atendimento</h2>
+      <p class="mt-5 text-lg leading-8 text-gray-700">Corridas em Pato Branco podem partir de <strong>R$10</strong>. O valor final depende do local, distância, peso, tamanho do item e tipo de serviço.</p>
+      <p class="mt-4 text-base leading-7 text-gray-700">Para entregas fora da cidade, o valor é combinado conforme a rota.</p>
+      <div class="mt-6">
+        <CallButton label="Consultar por ligação" />
+      </div>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {['Distância e rota', 'Peso do item', 'Tamanho do volume', 'Cidade de destino'].map((item) => (
+        <div class="rounded-3xl bg-white p-5 font-bold text-gray-900 shadow-sm ring-1 ring-red-100">{item}</div>
+      ))}
+    </div>
+  </div>
+</section>

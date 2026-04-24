@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Region from '../components/Region.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Pricing from '../components/Pricing.astro';
+import Payments from '../components/Payments.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import MobileCallBar from '../components/MobileCallBar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Moto Táxi em Pato Branco | Matheus Moto Táxi';
+const description = 'Moto táxi em Pato Branco com atendimento rápido e seguro. Transporte de passageiros, entregas, documentos, marmitas, remédios, peças e viagens para a região. Ligue agora.';
+---
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <Region />
+    <HowItWorks />
+    <Pricing />
+    <Payments />
+    <Testimonials />
+    <FinalCTA />
+  </main>
+  <Footer />
+  <MobileCallBar />
+</BaseLayout>

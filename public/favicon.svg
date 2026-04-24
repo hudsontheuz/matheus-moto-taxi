@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Matheus Moto Táxi">
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <path d="M13 40h9l7-16h8l5 16h9" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="21" cy="42" r="7" fill="none" stroke="#fff" stroke-width="4"/>
+  <circle cx="48" cy="42" r="7" fill="none" stroke="#fff" stroke-width="4"/>
+</svg>

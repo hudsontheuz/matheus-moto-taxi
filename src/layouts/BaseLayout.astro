@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://matheusmototaxi.com.br').toString();
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Matheus Moto Táxi',
+      description,
+      telephone: '+55 46 99107-3234',
+      areaServed: ['Pato Branco', 'Jardim Floresta', 'Vitorino', 'São Lourenço do Oeste', 'Mariópolis', 'Clevelândia', 'Itapejara d’Oeste', 'Bom Sucesso do Sul'],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Pato Branco',
+        addressRegion: 'PR',
+        addressCountry: 'BR'
+      },
+      paymentAccepted: ['Pix', 'Dinheiro', 'Cartão'],
+      openingHours: 'Mo-Sa 08:00-18:00'
+    })}></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

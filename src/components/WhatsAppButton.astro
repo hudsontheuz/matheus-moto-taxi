@@ -1,0 +1,18 @@
+---
+type Props = {
+  label?: string;
+  class?: string;
+};
+
+const message = encodeURIComponent('Olá, Matheus! Vim pelo site e gostaria de combinar uma corrida ou entrega.');
+const { label = 'WhatsApp', class: className = '' } = Astro.props;
+---
+<a
+  href={`https://wa.me/5546991073234?text=${message}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chamar Matheus Moto Táxi no WhatsApp"
+  class={`inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-base font-bold text-gray-900 transition hover:border-red-200 hover:bg-red-50 focus:outline-none focus:ring-4 focus:ring-red-100 ${className}`}
+>
+  <span aria-hidden="true" class="mr-2">💬</span>{label}
+</a>

@@ -1,0 +1,29 @@
+---
+const services = [
+  ['🛵', 'Transporte de passageiros'],
+  ['🍔', 'Entrega de lanches'],
+  ['🍱', 'Entrega de marmitas'],
+  ['📄', 'Entrega de documentos'],
+  ['💊', 'Busca de remédios'],
+  ['🔧', 'Entrega de peças'],
+  ['🗓️', 'Corridas agendadas'],
+  ['🎁', 'Roupas e perfumes'],
+];
+---
+<section id="servicos" class="bg-white px-4 py-16 lg:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-black uppercase tracking-wide text-red-700">Serviços</p>
+      <h2 class="mt-2 text-3xl font-black text-gray-950 sm:text-4xl">Corridas e entregas para o seu dia a dia</h2>
+      <p class="mt-4 text-lg leading-8 text-gray-700">Seja para uma corrida rápida ou uma entrega combinada, o atendimento é feito direto pelo telefone ou WhatsApp.</p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map(([icon, title]) => (
+        <article class="rounded-3xl border border-gray-100 bg-gray-50 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-2xl ring-1 ring-red-100">{icon}</div>
+          <h3 class="text-lg font-black text-gray-950">{title}</h3>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
