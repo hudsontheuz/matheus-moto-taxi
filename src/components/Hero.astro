@@ -1,21 +1,41 @@
 ---
-import CallButton from './CallButton.astro';
-import WhatsAppButton from './WhatsAppButton.astro';
+import CallButton from "./CallButton.astro";
+import WhatsAppButton from "./WhatsAppButton.astro";
 ---
-<section id="inicio" class="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,#fee2e2,transparent_35%),linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)]">
-  <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 pb-24 lg:grid-cols-2 lg:px-6 lg:py-20">
-    <div>
-      <p class="mb-4 inline-flex rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 ring-1 ring-red-100">
+
+<section
+  id="inicio"
+  class="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,#7f1d1d,transparent_28%),linear-gradient(180deg,#111827_0%,#030712_100%)]"
+>
+  <div
+    class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 pb-24 lg:grid-cols-2 lg:px-6 lg:py-20"
+  >
+    <img
+      src="/images/hero-entrega-moto.png"
+      alt=""
+      class="pointer-events-none absolute bottom-0 right-[-180px] z-0 h-full max-w-none object-contain opacity-90"
+    />
+    <div class="relative z-10">
+      <p
+        class="mb-4 inline-flex rounded-full bg-red-500/10 px-4 py-2 text-sm font-bold text-red-300 ring-1 ring-red-400/20"
+      >
         Moto táxi em Pato Branco • Jardim Floresta
       </p>
-      <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+
+      <h1
+        class="max-w-3xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+      >
         Moto Táxi em Pato Branco com atendimento rápido e seguro
       </h1>
-      <p class="mt-5 text-xl font-semibold text-red-700">
+
+      <p class="mt-5 text-xl font-semibold text-red-300">
         Sua entrega com rapidez e segurança em Pato Branco e região.
       </p>
-      <p class="mt-5 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
-        Atendimento com base no bairro Jardim Floresta, em Pato Branco. Faço transporte de passageiros, entregas rápidas e corridas agendadas para Pato Branco e cidades da região.
+
+      <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+        Atendimento com base no bairro Jardim Floresta, em Pato Branco. Faço
+        transporte de passageiros, entregas rápidas e corridas agendadas para
+        Pato Branco e cidades da região.
       </p>
 
       <div class="mt-8 grid gap-3 sm:flex">
@@ -23,41 +43,19 @@ import WhatsAppButton from './WhatsAppButton.astro';
         <WhatsAppButton label="Chamar no WhatsApp" class="w-full sm:w-auto" />
       </div>
 
-      <div class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-gray-700">
-        <span class="rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-gray-100">Pix, dinheiro e cartão</span>
-        <span class="rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-gray-100">Segunda a sábado até às 18h</span>
-      </div>
-    </div>
-
-    <div class="relative">
-      <div class="rounded-[2rem] bg-gray-950 p-5 shadow-2xl shadow-gray-950/20">
-        <div class="rounded-[1.5rem] bg-gradient-to-br from-red-600 to-red-900 p-6 text-white">
-          <div class="rounded-3xl bg-white/10 p-5 ring-1 ring-white/20">
-            <svg viewBox="0 0 640 430" role="img" aria-label="Ilustração de moto táxi vermelho" class="h-auto w-full">
-              <rect x="40" y="250" width="560" height="24" rx="12" fill="rgba(255,255,255,.18)" />
-              <circle cx="170" cy="292" r="58" fill="#111827" />
-              <circle cx="170" cy="292" r="31" fill="#f9fafb" />
-              <circle cx="492" cy="292" r="58" fill="#111827" />
-              <circle cx="492" cy="292" r="31" fill="#f9fafb" />
-              <path d="M160 276 L250 175 H360 L450 276" fill="none" stroke="#111827" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M235 180 C270 122 344 105 413 145 L470 180" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" />
-              <path d="M230 175 H382 C424 175 452 204 465 247 L468 260 H352 C311 260 273 245 242 220 L205 261 H160" fill="#ef4444" />
-              <path d="M360 142 C392 132 435 143 461 172" fill="none" stroke="#111827" stroke-width="15" stroke-linecap="round" />
-              <path d="M400 95 C430 92 455 114 459 144 C427 150 398 136 385 111 C388 102 392 98 400 95Z" fill="#ef4444" />
-              <path d="M432 101 C455 111 471 133 470 158" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" />
-              <path d="M360 178 L320 260" stroke="#111827" stroke-width="16" stroke-linecap="round" />
-              <path d="M278 146 L315 260" stroke="#111827" stroke-width="16" stroke-linecap="round" />
-              <path d="M453 178 H520" stroke="#fff" stroke-width="14" stroke-linecap="round" />
-              <path d="M105 227 C93 199 108 165 142 154" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none" opacity=".75" />
-              <path d="M80 198 C62 173 66 137 94 116" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none" opacity=".35" />
-            </svg>
-          </div>
-          <div class="mt-5 rounded-2xl bg-white p-4 text-gray-950 shadow-xl">
-            <p class="text-sm font-black uppercase text-red-700">Ligue direto</p>
-            <p class="mt-1 text-2xl font-black">(46) 99107-3234</p>
-            <p class="mt-1 text-sm text-gray-600">Atendimento para corridas e entregas.</p>
-          </div>
-        </div>
+      <div
+        class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-slate-200"
+      >
+        <span
+          class="rounded-full bg-white/10 px-4 py-2 shadow-sm ring-1 ring-white/10"
+        >
+          Pix e Dinheiro
+        </span>
+        <span
+          class="rounded-full bg-white/10 px-4 py-2 shadow-sm ring-1 ring-white/10"
+        >
+          Segunda a sábado até às 18h
+        </span>
       </div>
     </div>
   </div>

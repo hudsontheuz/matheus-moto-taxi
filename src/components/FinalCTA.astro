@@ -1,14 +1,28 @@
 ---
-import CallButton from './CallButton.astro';
-import WhatsAppButton from './WhatsAppButton.astro';
+import CallButton from "./CallButton.astro";
+import WhatsAppButton from "./WhatsAppButton.astro";
 ---
+
 <section class="bg-white px-4 py-16 pb-28 lg:px-6 lg:pb-16">
-  <div class="mx-auto max-w-4xl rounded-[2rem] bg-gradient-to-br from-red-600 to-gray-950 p-6 text-center text-white shadow-2xl md:p-12">
-    <h2 class="text-3xl font-black sm:text-4xl">Precisa de moto táxi ou entrega em Pato Branco?</h2>
-    <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-red-50">Fale direto com o Matheus e combine sua corrida ou entrega com rapidez e segurança.</p>
+  <div
+    class="mx-auto max-w-4xl rounded-[2rem] bg-gradient-to-br from-red-600 to-gray-950 p-6 text-center text-white shadow-2xl md:p-12"
+  >
+    <h2 class="text-3xl font-black sm:text-4xl">
+      Precisa de moto táxi ou entrega em Pato Branco?
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-red-50">
+      Fale direto com o Matheus e combine sua corrida ou entrega com rapidez e
+      segurança.
+    </p>
     <div class="mt-8 grid gap-3 sm:flex sm:justify-center">
-      <CallButton label="Ligar agora" class="w-full bg-white text-red-700 hover:bg-red-50 sm:w-auto" />
-      <WhatsAppButton label="Chamar no WhatsApp" class="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 sm:w-auto" />
+      <CallButton
+        label="Ligar agora"
+        class="w-full bg-red-100 text-red-700 hover:bg-red-50 sm:w-auto"
+      />
+      <WhatsAppButton
+        label="Chamar no WhatsApp"
+        class="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 sm:w-auto"
+      />
     </div>
   </div>
 </section>
