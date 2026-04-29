@@ -5,17 +5,23 @@ import WhatsAppButton from "./WhatsAppButton.astro";
 
 <section
   id="inicio"
-  class="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,#7f1d1d,transparent_28%),linear-gradient(180deg,#111827_0%,#030712_100%)]"
+  class="relative isolate overflow-hidden bg-[radial-gradient(circle_at_top_right,#7f1d1d,transparent_28%),linear-gradient(180deg,#111827_0%,#030712_100%)]"
 >
   <div
-    class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 pb-24 lg:grid-cols-2 lg:px-6 lg:py-20"
+    class="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[120%] max-w-none -translate-x-1/2 sm:w-[95%] md:w-[80%] lg:left-auto lg:right-[-245px] lg:w-[120%] lg:max-w-[1300px] lg:translate-x-0"
   >
     <img
       src="/images/hero-entrega-moto.png"
       alt=""
-      class="pointer-events-none absolute bottom-0 left-1/2 z-0 h-[85%] max-w-none -translate-x-1/2 object-contain opacity-45 lg:left-auto lg:right-[-180px] lg:h-full lg:translate-x-0 lg:opacity-90"
+      aria-hidden="true"
+      class="animate-fade-right animate-once animate-duration-[1500ms] animate-delay-[1500ms] w-full object-contain opacity-25 lg:opacity-90"
     />
-    <div class="relative z-10">
+  </div>
+
+  <div
+    class="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 pb-24 lg:grid-cols-2 lg:px-6 lg:py-20"
+  >
+    <div>
       <p
         class="mb-4 inline-flex rounded-full bg-red-500/10 px-4 py-2 text-sm font-bold text-red-300 ring-1 ring-red-400/20"
       >

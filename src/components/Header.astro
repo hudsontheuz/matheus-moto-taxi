@@ -1,24 +1,46 @@
 ---
-import CallButton from './CallButton.astro';
+import CallButton from "./CallButton.astro";
 ---
-<header class="sticky top-0 z-40 border-b border-gray-100 bg-white/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-6">
-    <a href="#inicio" class="flex items-center gap-3" aria-label="Voltar ao início">
-      <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-dashed border-red-300 bg-red-50 text-xs font-bold text-red-700">
-        Logo
+
+<header
+  class="sticky top-0 z-40 border-b border-gray-100 bg-white/95 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-6"
+  >
+    <a
+      href="#inicio"
+      class="flex items-center gap-3"
+      aria-label="Voltar ao início"
+    >
+      <div class="flex">
+        <img
+          src="/images/logo.png"
+          alt="Logo Matheus Moto Táxi"
+          class="h-[60px] w-[60px] object-contain"
+        />
       </div>
+
       <div>
-        <p class="text-sm font-black uppercase tracking-wide text-gray-950">Matheus Moto Táxi</p>
+        <p class="text-sm font-black uppercase tracking-wide text-gray-950">
+          Matheus Moto Táxi
+        </p>
         <p class="text-xs font-medium text-gray-500">Pato Branco e região</p>
       </div>
     </a>
 
-    <nav class="hidden items-center gap-6 text-sm font-semibold text-gray-700 md:flex" aria-label="Navegação principal">
+    <nav
+      class="hidden items-center gap-6 text-sm font-semibold text-gray-700 md:flex"
+      aria-label="Navegação principal"
+    >
       <a class="hover:text-red-700" href="#servicos">Serviços</a>
       <a class="hover:text-red-700" href="#regiao">Região</a>
       <a class="hover:text-red-700" href="#valores">Valores</a>
     </nav>
 
-    <CallButton label="Ligar" class="hidden px-5 md:inline-flex" />
+    <CallButton
+      label="Ligar"
+      class="hidden px-5 md:inline-flex animate-pulse animate-infinite animate-duration-[1700ms]"
+    />
   </div>
 </header>

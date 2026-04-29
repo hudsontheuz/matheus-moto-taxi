@@ -34,8 +34,12 @@ const cities = [
       <h3 class="text-xl font-black">Cidades próximas</h3>
       <div class="mt-5 grid gap-3 sm:grid-cols-2">
         {
-          cities.map((city) => (
-            <div class="rounded-2xl bg-gray-50 px-4 py-3 text-sm font-bold ring-1 ring-gray-100">
+          cities.map((city, index) => (
+            <div
+              data-city-card
+              class="rounded-2xl bg-gray-50 px-4 py-3 text-sm font-bold opacity-100 ring-1 ring-gray-100 lg:opacity-0"
+              style={`animation-delay: ${index * 700}ms;`}
+            >
               {city}
             </div>
           ))
@@ -44,3 +48,44 @@ const cities = [
     </div>
   </div>
 </section>
+
+<script>
+  const regionSection = document.querySelector("#regiao");
+  const cityCards = document.querySelectorAll("[data-city-card]");
+
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+  if (regionSection && cityCards.length && isDesktop) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting) {
+          cityCards.forEach((card) => {
+            card.classList.add(
+              "is-visible",
+              "animate-fade",
+              "animate-once",
+              "animate-duration-700",
+            );
+          });
+
+          observer.unobserve(regionSection);
+        }
+      },
+      {
+        threshold: 0.25,
+      },
+    );
+
+    observer.observe(regionSection);
+  }
+</script>
+
+<style>
+  @media (min-width: 1024px) {
+    [data-city-card].is-visible {
+      opacity: 1;
+    }
+  }
+</style>
