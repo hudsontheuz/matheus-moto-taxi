@@ -1,5 +1,5 @@
 ---
-import CallButton from "./CallButton.astro";
+import WhatsAppButton from "./WhatsAppButton.astro";
 ---
 
 <header
@@ -13,13 +13,11 @@ import CallButton from "./CallButton.astro";
       class="flex items-center gap-3"
       aria-label="Voltar ao início"
     >
-      <div class="flex">
-        <img
-          src="/images/logo.png"
-          alt="Logo Matheus Moto Táxi"
-          class="h-[60px] w-[60px] object-contain"
-        />
-      </div>
+      <img
+        src="/images/logo.png"
+        alt="Logo Matheus Moto Táxi"
+        class="h-[60px] w-[60px] object-contain"
+      />
 
       <div>
         <p class="text-sm font-black uppercase tracking-wide text-gray-950">
@@ -38,6 +36,10 @@ import CallButton from "./CallButton.astro";
       <a class="hover:text-red-700" href="#valores">Valores</a>
     </nav>
 
-    <CallButton label="Ligar" class="hidden px-5 md:inline-flex" />
+    <WhatsAppButton
+      label="WhatsApp"
+      class="hidden px-5 md:inline-flex"
+      iconClass="whatsapp-shake-desktop"
+    />
   </div>
 </header>

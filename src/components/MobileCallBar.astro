@@ -11,17 +11,23 @@ const message = encodeURIComponent(
   <div class="mx-auto grid max-w-md grid-cols-[2fr_1fr] gap-2">
     <a
       href="tel:991073234"
-      class="flex min-h-14 items-center justify-center rounded-2xl bg-red-600 px-4 text-base font-black text-white shadow-lg shadow-red-600/25 animate-pulse animate-infinite animate-duration-[1800ms] lg:w-auto"
+      class="flex min-h-14 items-center justify-center rounded-2xl bg-red-600 px-4 text-base font-black text-white shadow-lg shadow-red-600/25 animate-pulse animate-infinite animate-duration-[1800ms]"
     >
       📞 Ligar agora
     </a>
+
     <a
       href={`https://wa.me/5546991073234?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      class="flex min-h-14 items-center justify-center rounded-2xl border border-gray-200 bg-white px-3 text-sm font-black text-gray-950"
+      class="flex min-h-14 items-center justify-center rounded-2xl border border-gray-200 bg-white px-3 text-sm font-black text-gray-950 transition hover:border-green-200 hover:bg-green-50 hover:text-green-700"
     >
-      💬 WhatsApp
+      <span
+        aria-hidden="true"
+        class="mr-1.5 h-5 w-5 bg-current [mask-image:url(/images/whatsapp-button.svg)] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain] [-webkit-mask-image:url(/images/whatsapp-button.svg)] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:contain]"
+      ></span>
+
+      WhatsApp
     </a>
   </div>
 </div>
